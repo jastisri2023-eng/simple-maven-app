@@ -1,10 +1,31 @@
-package com.example; 
-import org.junit.Test; 
-import static org.junit.Assert.*; 
-public class AppTest { 
-@Test 
-public void testAdd() { 
-App app = new App(); 
-assertEquals(5, app.add(2, 3)); 
-} 
-} 
+package com.example;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class AppTest {
+
+    @Test
+    public void testGradeA() {
+        App app = new App();
+        assertEquals("A", app.calculateGrade(95));
+    }
+
+    @Test
+    public void testGradeB() {
+        App app = new App();
+        assertEquals("B", app.calculateGrade(80));
+    }
+
+    @Test
+    public void testGradeC() {
+        App app = new App();
+        assertEquals("C", app.calculateGrade(65));
+    }
+
+    @Test
+    public void testGradeFail() {
+        App app = new App();
+        assertEquals("F", app.calculateGrade(30));
+    }
+}
